@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Footer from './components/footer';
 import Header from './components/header';
 import Initial from './Initial';
@@ -25,7 +25,7 @@ function App() {
         <CartProvider>
           <LoggedProvider>
             <ToastContainer />
-            <Router>
+            <BrowserRouter>
               <div className="flex flex-col min-h-screen">
                 <Header />
                 <main className="flex-grow mt-14">
@@ -80,7 +80,7 @@ function App() {
                 </main>
                 <Footer />
               </div>
-            </Router>
+            </BrowserRouter>
           </LoggedProvider>
         </CartProvider>
       </NotificationProvider>
