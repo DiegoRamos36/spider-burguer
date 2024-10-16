@@ -4,6 +4,7 @@ import React, { createContext } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLoad } from '../hooks/useLoad';
+import { apiUrl } from '../api/config';
 
 interface CartContextType extends CartActions {
   cart: Item[];
@@ -54,14 +55,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       'Content-Type': 'application/json',
     };
 
-    const response = await fetch(
-      'http://localhost:8081/create-checkout-session',
-      {
-        headers: headers,
-        method: 'POST',
-        body: JSON.stringify(body),
-      },
-    );
+    const response = await fetch(`${apiUrl}/create-checkout-session`, {
+      headers: headers,
+      method: 'POST',
+      body: JSON.stringify(body),
+    });
 
     if (!response.ok) {
       fail('Erro ao criar a sessão de checkout.');
