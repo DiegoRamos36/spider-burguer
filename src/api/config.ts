@@ -1,1 +1,1 @@
-export const apiUrl = 'http://localhost:8081';
+export const apiUrl = 'https://spider-server-m6m6.onrender.com';
