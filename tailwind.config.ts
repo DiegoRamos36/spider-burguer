@@ -38,6 +38,7 @@ const config: Config = {
       },
       height: {
         max: '34rem',
+        line: '1px',
       },
     },
     keyframes: {

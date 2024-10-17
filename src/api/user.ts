@@ -60,5 +60,34 @@ async function authUser(email: string, password: string) {
     return errorMessage;
   }
 }
+async function authUserFromGoogle(email: string) {
+  try {
+    const response = await fetch(`${apiUrl}/google-login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    });
 
-export const user = { authUser, createUser };
+    if (response.status !== 200) {
+      throw new Error('Falha ao logar!');
+    }
+
+    const token = await response.text();
+    if (!token) throw new Error('Token inválido!');
+    return { status: response.status, token };
+  } catch (error) {
+    let errorMessage = 'Erro desconhecido';
+
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+
+    return errorMessage;
+  }
+}
+
+export const user = { authUser, createUser, authUserFromGoogle };

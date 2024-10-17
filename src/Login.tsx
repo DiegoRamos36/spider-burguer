@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useLogged } from './hooks/useLogged';
 import { useNotification } from './hooks/useNotification';
 import { cookie } from './api/cookie';
+import { CredentialResponse, GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
 
 type DataType = {
   status: number;
@@ -42,6 +44,27 @@ const Login = () => {
       setLoading(false);
     }
   }
+
+  async function handleLoginSuccess(res: CredentialResponse) {
+    if (!res.credential) return fail('Falha ao logar com Google!');
+    const { email } = jwtDecode(res.credential) as { email: string };
+    try {
+      const data = (await user.authUserFromGoogle(email)) as DataType;
+      if (data.status !== 200) throw new Error('Falha ao autenticar');
+      cookie.setAuthTokenCookie(data.token, 1);
+      login();
+      navigate('/cardapio');
+    } catch (error) {
+      console.error(error);
+      fail('Falha ao logar com Google!');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  const handleLoginFailure = () => {
+    fail('Falha ao logar com os serviços da Google!');
+  };
 
   return (
     <section className={`text-white font-terciary p-10 flex justify-center `}>
@@ -90,6 +113,15 @@ const Login = () => {
                 {loading ? 'Carregando...' : 'Enviar'} <LogIn />
               </button>
             </span>
+          </div>
+          <div className="w-10/12 lg:w-8/12 mx-auto">
+            <GoogleLogin
+              locale="pt-BR"
+              text="continue_with"
+              theme="filled_black"
+              onSuccess={handleLoginSuccess}
+              onError={handleLoginFailure}
+            />
           </div>
         </form>
       </div>

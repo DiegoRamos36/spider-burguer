@@ -58,7 +58,7 @@ const MyAccount = ({ openMenu }: { openMenu: boolean }) => {
             <h1 className=" w-24 md:w-auto overflow-hidden text-lg lg:text-2xl lg:text-secondary">
               {user.name}
             </h1>
-            <p className="w-full h-1 bg-secondary rounded-lg mt-2 lg:block hidden"></p>
+            <p className="w-full h-line bg-secondary rounded-lg mt-2 lg:block hidden"></p>
           </div>
           <a
             href="/pedidos"
