@@ -17,22 +17,21 @@ const Carrinho = () => {
   return (
     <section>
       {cart ? (
-        <ul className="w-10/12 mx-auto my-10 flex flex-col gap-4">
+        <ul className=" mx-2 pt-0 md:pt-10 lg:pt-0 md:w-10/12 md:mx-auto my-10 flex flex-col gap-4">
           {cart &&
             cart.map((item: Item, index) => (
               <li
-                className="flex justify-around items-center border-2 border-black px-4 font-terciary text-2xl"
+                className="flex justify-between md:justify-around items-center border-2 border-black pe-2 md:px-4 font-terciary text-2xl"
                 key={index}
               >
-                <p>1</p>
+                <p className="hidden md:block">1</p>
                 <img
                   src={item.imgSrc}
                   alt={item.imgAlt}
-                  width={180}
-                  height={180}
+                  className="w-28 md:w-36 md:h-36"
                 />
                 <p>{item.name}</p>
-                <p>-</p>
+                <p className="hidden md:block">-</p>
                 <p>{item.price}</p>
                 <p
                   onClick={() => remove(item.id)}
@@ -43,27 +42,28 @@ const Carrinho = () => {
               </li>
             ))}
           <form
-            className="flex justify-between"
+            className="flex justify-between flex-col"
             onSubmit={(event: React.FormEvent) => {
               event.preventDefault();
               pay(cart, userId, coupon);
             }}
           >
-            <p
-              onClick={() => removeAll()}
-              className="bg-primary p-2 rounded-lg font-terciary text-xl"
-            >
-              Limpar
-            </p>
+            <div className="flex justify-between">
+              <p
+                onClick={() => removeAll()}
+                className="bg-primary p-2 rounded-lg font-terciary text-xl"
+              >
+                Limpar
+              </p>
+              <button
+                type="submit"
+                className="bg-primary p-2 rounded-lg font-terciary text-xl flex gap-2"
+              >
+                Finalizar Compra <CircleArrowRight />
+              </button>
+            </div>
 
-            <button
-              type="submit"
-              className="bg-primary p-2 rounded-lg font-terciary text-xl flex gap-2"
-            >
-              Finalizar Compra <CircleArrowRight />
-            </button>
-
-            <div className="flex items-center">
+            <div className="flex items-center mt-5 self-end">
               <label>
                 <input
                   type="text"

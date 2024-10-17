@@ -1,16 +1,22 @@
 import spiderLogo from '../assets/logo-spider.png';
 
 const Footer = () => {
+  const endereco = {
+    linha1: 'Avenida Rio Branco',
+    numero: 1234,
+    ref: 'Perto do arco iris',
+  };
   return (
     <footer className={`bg-primary py-4`}>
-      <div className="w-10/12 mx-auto grid grid-cols-2 lg:flex lg:gap-10">
+      <div className="w-10/12 mx-auto grid grid-cols-2 lg:grid-cols-3  lg:gap-5">
         <div>
           <h2 className="text-stone-950 text-2xl font-terciary">
             Spider Burguer
           </h2>
           <p className="font-sans text-stone-600 leading-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi
-            harum ab rem neque quaerat qui repellendus ullam a provident.
+            {' '}
+            {endereco.linha1} {endereco.numero}, {endereco.ref}. Venha
+            experimentar nossos deliciosos lanches!
           </p>
         </div>
         <div>
@@ -18,17 +24,15 @@ const Footer = () => {
             Aqui é o seu lar
           </h2>
           <p className="font-sans text-stone-600 leading-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
-            mollitia id in aspernatur deleniti voluptatem voluptas magnam nemo
-            ab cum?
+            Cada prato que preparamos é pensado com cuidado para trazer até você
+            o melhor da nossa cozinha.
           </p>
         </div>
         <div>
           <h2 className="text-stone-950 text-2xl font-terciary">Registre-se</h2>
           <p className="font-sans text-stone-600 leading-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
-            tenetur id ipsum autem. At earum consequuntur optio eveniet ullam
-            illum!
+            Ao criar sua conta, você terá acesso exclusivo a ofertas especiais e
+            promoções personalizadas.
           </p>
         </div>
       </div>

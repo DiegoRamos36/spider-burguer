@@ -67,21 +67,28 @@ const Login = () => {
   };
 
   return (
-    <section className={`text-white font-terciary p-10 flex justify-center `}>
-      <div className=" grid-cols-1 md:grid-cols-2 grid w-full sm:w-10/12 justify-center mt-20 md:mt-0 ">
-        <div className="hidden bg-primary md:flex flex-col items-center justify-between">
+    <section
+      className={`text-white font-terciary px-6 pb-10 md:p-10 sm:mt-0 md:mt-10 lg:mt-0 flex justify-center  md:w-10/12 mx-auto `}
+    >
+      <div className="grid-cols-1 lg:grid-cols-2 grid w-full sm:w-10/12 justify-center mt-20 md:mt-0 ">
+        <div className="hidden bg-primary lg:flex flex-col items-center justify-between rounded">
           <h1 className="text-3xl lg:text-4xl text-center text-secondary py-2 ">
             Entre em Spider Burguer
           </h1>
-          <img height={400} src={loginPage} alt="Para todos os momentos" />
+          <img
+            height={400}
+            src={loginPage}
+            className="flex-grow"
+            alt="Para todos os momentos"
+          />
         </div>
 
         <form
           onSubmit={handleData}
-          className="flex flex-col  bg-secondary justify-center "
+          className="flex flex-col  bg-secondary justify-center rounded-md lg:rounded "
         >
           <div className="flex flex-col w-10/12 lg:w-8/12 mx-auto">
-            <p className="text-center flex justify-center mt-6 lg:mt-0 lg: mb-6">
+            <p className="text-center flex justify-center mt-6 lg:mt-0 lg: mb-6 pt-10">
               <CircleUserRound height={90} width={90} />
             </p>
             <label className="text-2xl mb-2" htmlFor="email">
@@ -104,24 +111,30 @@ const Login = () => {
               name="password"
               className=" text-lg text-secondary font-sans mb-8 rounded-md"
             />
-            <span className="mb-4">
+            <span className="mb-4 flex justify-between">
               <button
-                className="bg-primary rounded-lg flex text-black py-1 px-2 items-center justify-center"
+                className="bg-primary rounded-lg flex text-black py-1 px-2 items-center text-xl "
                 type="submit"
                 disabled={loading}
               >
-                {loading ? 'Carregando...' : 'Enviar'} <LogIn />
+                {loading ? 'Carregando...' : 'Enviar'}{' '}
+                <LogIn className="text-secondary" />
               </button>
             </span>
-          </div>
-          <div className="w-10/12 lg:w-8/12 mx-auto">
-            <GoogleLogin
-              locale="pt-BR"
-              text="continue_with"
-              theme="filled_black"
-              onSuccess={handleLoginSuccess}
-              onError={handleLoginFailure}
-            />
+
+            <h1 className="text-2xl">ou</h1>
+
+            <div className="py-4">
+              <GoogleLogin
+                locale="pt-BR"
+                type="standard"
+                shape="rectangular"
+                text="continue_with"
+                theme="filled_black"
+                onSuccess={handleLoginSuccess}
+                onError={handleLoginFailure}
+              />
+            </div>
           </div>
         </form>
       </div>
