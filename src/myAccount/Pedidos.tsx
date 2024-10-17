@@ -44,7 +44,7 @@ const Pedidos = () => {
     <>
       {pedidos.length > 0 ? (
         <section className="w-10/12 mx-auto my-10">
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3">
             {pedidos.reverse().map((pedido) => (
               <li
                 key={pedido.id}

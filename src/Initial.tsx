@@ -128,13 +128,13 @@ const Initial = () => {
 
             <section className="bg-secondary pt-10  mt-10">
               <h2
-                className={`font-secondary text-center text-white mx-auto text-5xl`}
+                className={`font-secondary text-center text-white mx-auto text-4xl md:text-5xl`}
               >
                 NÃO ENCONTROU O QUE PROCURAVA?
               </h2>
 
               <form
-                className="flex w-10/12 mx-auto mt-5"
+                className="flex mx-2 sm:w-10/12 sm:mx-auto mt-5"
                 onSubmit={handleSubmit}
               >
                 <input
