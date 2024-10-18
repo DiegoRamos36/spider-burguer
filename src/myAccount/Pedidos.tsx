@@ -4,7 +4,6 @@ import React from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { cookie } from '../api/cookie';
 import { Item } from '../Cardapio';
-import Loading from '../components/Loading';
 import { limparData } from '../functions/limparData';
 import { inverterData } from '../functions/inverterData';
 
@@ -54,7 +53,7 @@ const Pedidos = () => {
                   <p>{inverterData(limparData(pedido.createdAt))}</p>
                   <p>R$ {pedido.amountTotal / 100}</p>
                 </div>
-                <div className="flex flex-col flex-grow gap-2 ">
+                <div className="flex flex-col flex-grow gap-4 md:gap-2 ">
                   {pedido.produtos.map((item, index) => (
                     <li
                       key={index}
@@ -87,7 +86,7 @@ const Pedidos = () => {
           </div>
         </section>
       ) : (
-        <Loading />
+        <div></div>
       )}
     </>
   );
