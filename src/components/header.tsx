@@ -28,7 +28,7 @@ const Header = React.memo(() => {
   return (
     <nav className="bg-secondary w-screen z-20 py-1 md:py-3 fixed border border-black">
       <div className="flex items-center justify-between px-2 md:w-11/12 m-auto">
-        <div className="flex gap-10 text-white font-terciary text-xl">
+        <div className="flex gap-2 md:gap-5 text-white font-terciary text-xl">
           <a
             href={filialInstagramLink}
             target="_blank"
