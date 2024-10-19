@@ -51,11 +51,11 @@ const Initial = () => {
 
   return (
     <section>
+      <CookieWarning />
       {products ? (
         <section>
           <>
             <section className="bg-[url('./assets/bg-landingpage.webp')] bg-cover bg-center">
-              <CookieWarning />
               <div className="flex h-max mx-auto w-10/12 ">
                 <div className="my-auto w-full lg:text-left text-center ">
                   <h1 className="text-5xl text-white  ">
@@ -101,9 +101,11 @@ const Initial = () => {
                       className="flex flex-col shadow-lg py-4"
                     >
                       <img
-                        className="rounded-ss-md rounded-se-md w-full"
+                        className="rounded-ss-md rounded-se-md "
                         src={product.imgSrc}
                         alt={product.imgAlt}
+                        width={600}
+                        height={600}
                       />
                       <h2 className="font-secondary text-2xl mx-auto my-4">
                         {product.name}
