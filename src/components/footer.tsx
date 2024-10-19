@@ -1,5 +1,5 @@
 import React from 'react';
-import spiderLogo from '../assets/logo-spider.png';
+import spiderLogo from '../assets/logo-spider.webp';
 
 const Footer = React.memo(() => {
   const endereco = {

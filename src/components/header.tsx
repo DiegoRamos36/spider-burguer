@@ -7,7 +7,7 @@ import {
   Phone,
   User,
 } from 'lucide-react';
-import logoHeader from '../assets/logo-spider.png';
+import logoHeader from '../assets/logo-spider.webp';
 import { useLogged } from '../hooks/useLogged';
 import { useCart } from '../hooks/useCart';
 import MyAccount from '../MyAccount';

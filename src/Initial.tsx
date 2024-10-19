@@ -1,5 +1,5 @@
 import React from 'react';
-import spiderman from './assets/spiderman.png';
+import spiderman from './assets/spiderman.webp';
 import { Item as Product } from './Cardapio';
 import { Item } from './api/items';
 import { useCart } from './hooks/useCart';
@@ -101,7 +101,7 @@ const Initial = () => {
                       className="flex flex-col shadow-lg py-4"
                     >
                       <img
-                        className="rounded-ss-md rounded-se-md"
+                        className="rounded-ss-md rounded-se-md w-full"
                         src={product.imgSrc}
                         alt={product.imgAlt}
                       />
