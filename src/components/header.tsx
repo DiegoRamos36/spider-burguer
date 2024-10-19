@@ -26,15 +26,15 @@ const Header = React.memo(() => {
   const filialInstagramLink = '';
 
   return (
-    <nav className="bg-secondary w-screen z-20 py-1 md:py-3 fixed border border-black">
+    <nav className="bg-secondary w-screen z-20 py-1 md:py-3 fixed shadow">
       <div className="flex items-center justify-between px-2 md:w-11/12 m-auto">
-        <div className="flex gap-2 md:gap-5 text-white font-terciary text-xl">
+        <div className="flex gap-2 sm:gap-5 text-white font-terciary text-xl">
           <a
             href={filialInstagramLink}
             target="_blank"
             className="flex items-center px-2 gap-2"
           >
-            <Instagram width={36} height={36} className="text-primary" />
+            <Instagram className="text-primary w-7 h-7 sm:w-9 sm:h-9" />
             <span className="hidden lg:block">Instagram</span>
           </a>
           <a
@@ -42,7 +42,7 @@ const Header = React.memo(() => {
             target="_blank"
             className="flex items-center cursor-pointer gap-2"
           >
-            <Phone width={36} height={36} className="text-primary" />
+            <Phone className="text-primary w-7 h-7 sm:w-9 sm:h-9" />
             <span className="hidden lg:block">WhatsApp</span>
           </a>
         </div>
@@ -56,19 +56,17 @@ const Header = React.memo(() => {
           <img
             src={logoHeader}
             alt="Logo Spider"
-            width={70}
-            height={60}
-            className="cursor-pointer"
+            className="cursor-pointer w-20 h-20"
           />
         </a>
 
-        <div className={`font-terciary text-xl text-white flex md:gap-5`}>
+        <div className={`font-terciary text-xl text-white flex sm:gap-5`}>
           {isLoggedIn ? (
             <p
               className="flex items-center gap-2 cursor-pointer px-2 relative"
               onClick={() => setOpenMenu(!openMenu)}
             >
-              <User className="text-primary" width={36} height={36} />{' '}
+              <User className="text-primary  w-7 h-7 sm:w-9 sm:h-9" />{' '}
               <a className="hidden lg:block">MINHA CONTA</a>
               <MyAccount openMenu={openMenu} />
             </p>
@@ -77,7 +75,7 @@ const Header = React.memo(() => {
               href="/login"
               className="flex items-center gap-2 cursor-pointer px-2 relative"
             >
-              <LogIn className="text-primary" width={36} height={36} />{' '}
+              <LogIn className="text-primary  w-7 h-7 sm:w-9 sm:h-9" />{' '}
               <a className="hidden lg:block">LOGAR</a>
             </a>
           )}
@@ -87,7 +85,7 @@ const Header = React.memo(() => {
               href="/carrinho"
               className="flex items-center gap-2 cursor-pointer px-2"
             >
-              <ShoppingBag className="text-primary" width={36} height={36} />{' '}
+              <ShoppingBag className="text-primary  w-7 h-7 sm:w-9 sm:h-9" />{' '}
               <a className="hidden lg:block">Carrinho: {total()}</a>
             </a>
           ) : (
@@ -95,7 +93,7 @@ const Header = React.memo(() => {
               href="/register"
               className="flex items-center gap-2 cursor-pointer px-2"
             >
-              <PlusCircle className="text-primary" width={36} height={36} />{' '}
+              <PlusCircle className="text-primary  w-7 h-7 sm:w-9 sm:h-9" />{' '}
               <a className="hidden lg:block">CRIAR CONTA</a>
             </a>
           )}

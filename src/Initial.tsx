@@ -89,7 +89,9 @@ const Initial = () => {
             </section>
 
             <section className={`w-10/12 mx-auto my-10 `}>
-              <h1 className={`font-secondary text-secondary text-5xl mb-10`}>
+              <h1
+                className={`font-secondary text-secondary text-4xl lg:text-5xl mb-10`}
+              >
                 Ultimos Lançamentos
               </h1>
 

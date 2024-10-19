@@ -33,7 +33,7 @@ const CookieWarning = () => {
     <>
       {openWarning ? (
         <div className="fixed p-4 w-full bottom-0 bg-secondary text-white">
-          <div className="mx-10 flex text-md md:text-lg justify-between items-center">
+          <div className=" mx-2 md:mx-5 lg:mx-10 flex text-md md:text-lg justify-between items-center">
             <p className="font-bold ">
               Este site usa cookies para garantir que você obtenha a melhor
               experiência em nosso site. <span>Saiba mais</span>
