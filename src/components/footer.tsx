@@ -1,6 +1,7 @@
+import React from 'react';
 import spiderLogo from '../assets/logo-spider.png';
 
-const Footer = () => {
+const Footer = React.memo(() => {
   const endereco = {
     linha1: 'Avenida Rio Branco',
     numero: 1234,
@@ -62,6 +63,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

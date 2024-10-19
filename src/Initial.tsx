@@ -30,8 +30,6 @@ const Initial = () => {
     getItems();
   }, []);
 
-  console.log(products);
-
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     if (searchField === '') {
