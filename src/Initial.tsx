@@ -58,7 +58,7 @@ const Initial = () => {
             <section className="bg-[url('./assets/bg-landingpage.webp')] bg-cover bg-center">
               <div className="flex h-max mx-auto w-10/12 ">
                 <div className="my-auto w-full lg:text-left text-center ">
-                  <h1 className="text-5xl text-white  ">
+                  <h1 className="text-5xl text-white font-text  ">
                     Onde o <span className="font-secondary">SABOR</span> e a{' '}
                     <span className="font-secondary">QUALIDADE</span> encontram{' '}
                     <span className="font-secondary">SUPERPODERES</span>
@@ -112,7 +112,9 @@ const Initial = () => {
                       <h2 className="font-secondary text-2xl mx-auto my-4">
                         {product.name}
                       </h2>
-                      <p className="mx-2 min-h-12">{product.desc}</p>
+                      <p className="mx-2 min-h-12 font-text text-md text-gray-700">
+                        {product.desc}
+                      </p>
 
                       <span className="flex items-center m-4 justify-between">
                         <button
@@ -143,7 +145,7 @@ const Initial = () => {
               >
                 <input
                   type="text"
-                  className="text-xl flex-grow pl-1 rounded-s-md"
+                  className="text-xl flex-grow p-1 rounded-s-sm font-text"
                   onChange={({ target }) => setSearchField(target.value)}
                 />
                 <button
@@ -172,7 +174,9 @@ const Initial = () => {
                   <h2 className="font-secondary text-2xl mx-auto my-4">
                     {searchedProduct.name}
                   </h2>
-                  <p className="mx-2">{searchedProduct.desc}</p>
+                  <p className="mx-2 font-text text-md text-gray-700">
+                    {searchedProduct.desc}
+                  </p>
 
                   <span className="flex items-center m-4 justify-between">
                     <button
@@ -215,7 +219,9 @@ const Initial = () => {
                         <h2 className="font-secondary text-2xl mx-auto my-4">
                           {product.name}
                         </h2>
-                        <p className="mx-2">{product.desc}</p>
+                        <p className="mx-2 font-text text-md text-gray-700">
+                          {product.desc}
+                        </p>
 
                         <span className="flex items-center m-4 justify-between">
                           <button

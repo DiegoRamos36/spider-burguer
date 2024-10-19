@@ -6,6 +6,7 @@ const secondaryColor = '#0E0A04';
 const mainFont = 'Bebas Neue';
 const secondaryFont = 'Bangers';
 const logoFont = 'Good Timing';
+const textFont = 'Oswald';
 
 const config: Config = {
   content: [
@@ -28,6 +29,7 @@ const config: Config = {
         primary: logoFont,
         secondary: secondaryFont,
         terciary: mainFont,
+        text: textFont,
       },
       colors: {
         primary: mainColor,

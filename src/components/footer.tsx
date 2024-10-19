@@ -8,13 +8,13 @@ const Footer = React.memo(() => {
     ref: 'Perto do arco iris',
   };
   return (
-    <footer className={`bg-primary py-4`}>
+    <footer className={`bg-primary py-4 font-text`}>
       <div className="w-10/12 mx-auto grid grid-cols-2 lg:grid-cols-3  lg:gap-5">
         <div>
           <h2 className="text-stone-950 text-2xl font-terciary">
             Spider Burguer
           </h2>
-          <p className="font-sans text-stone-600 leading-4">
+          <p className="text-stone-600 leading-4">
             {' '}
             {endereco.linha1} {endereco.numero}, {endereco.ref}. Venha
             experimentar nossos deliciosos lanches!
@@ -24,14 +24,14 @@ const Footer = React.memo(() => {
           <h2 className="text-stone-950 text-2xl font-terciary">
             Aqui é o seu lar
           </h2>
-          <p className="font-sans text-stone-600 leading-4">
+          <p className="text-stone-600 leading-4">
             Cada prato que preparamos é pensado com cuidado para trazer até você
             o melhor da nossa cozinha.
           </p>
         </div>
         <div>
           <h2 className="text-stone-950 text-2xl font-terciary">Registre-se</h2>
-          <p className="font-sans text-stone-600 leading-4">
+          <p className="text-stone-600 leading-4">
             Ao criar sua conta, você terá acesso exclusivo a ofertas especiais e
             promoções personalizadas.
           </p>

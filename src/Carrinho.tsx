@@ -51,7 +51,7 @@ const Carrinho = () => {
             <div className="flex justify-between">
               <p
                 onClick={() => removeAll()}
-                className="bg-primary p-2 rounded-lg font-terciary text-xl"
+                className="bg-primary p-2 rounded-lg font-terciary text-xl cursor-pointer"
               >
                 Limpar
               </p>

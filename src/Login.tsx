@@ -99,7 +99,7 @@ const Login = () => {
               type="email"
               name="email"
               value={email}
-              className=" text-lg text-secondary font-sans mb-4  rounded-md pl-1 "
+              className=" text-lg text-secondary font-text mb-4  rounded-sm px-1"
             />
             <label className="text-2xl mb-2" htmlFor="password">
               Senha
@@ -109,7 +109,7 @@ const Login = () => {
               type="password"
               value={password}
               name="password"
-              className=" text-lg text-secondary font-sans mb-8 rounded-md"
+              className=" text-lg text-secondary font-sans mb-8 rounded-sm px-1"
             />
             <span className="mb-4 flex justify-between">
               <button

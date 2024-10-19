@@ -67,7 +67,7 @@ const Register = () => {
   }
 
   return (
-    <section className="sm:w-10/12  lg:w-8/12 mx-4 sm:mx-auto pt-10 pb-10 mb-10">
+    <section className="sm:w-10/12  lg:w-8/12 mx-4 sm:mx-auto font-text pt-10 pb-10 mb-10">
       <form
         onSubmit={handleData}
         className="border px-8 py-4 sm:mt-0 md:mt-5 lg:mt-0  rounded-lg bg-secondary text-white"
