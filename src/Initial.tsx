@@ -55,7 +55,7 @@ const Initial = () => {
       {products ? (
         <section>
           <>
-            <section className="bg-[url('./assets/bg-landingpage.webp')] bg-cover bg-center">
+            <section className="bg-[url('./assets/bg-landingpage.webp')] bg-cover bg-center -mt-4 ">
               <div className="flex h-max mx-auto w-10/12 ">
                 <div className="my-auto w-full lg:text-left text-center ">
                   <h1 className="text-5xl text-white font-text  ">

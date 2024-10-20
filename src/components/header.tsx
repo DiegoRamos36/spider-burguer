@@ -26,7 +26,7 @@ const Header = React.memo(() => {
   const filialInstagramLink = '';
 
   return (
-    <nav className="bg-secondary w-screen z-20 py-1 md:py-3 fixed shadow">
+    <nav className="bg-secondary w-screen z-20 py-1 lg:py-3 fixed shadow">
       <div className="flex items-center justify-between px-2 md:w-11/12 m-auto">
         <div className="flex gap-2 sm:gap-5 text-white font-terciary text-xl">
           <a

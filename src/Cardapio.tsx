@@ -32,35 +32,34 @@ const Cardapio = () => {
   return (
     <section>
       {products ? (
-        <ul className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto w-10/12 pt-20 pb-20 md:pt-10">
-          {products &&
-            products.map((product) => (
-              <li
-                key={product.id}
-                className="flex flex-col shadow-md py-4 rounded-ss-xl rounded-se-xl"
-              >
-                <img
-                  className="rounded-ss-xl rounded-se-xl"
-                  src={product.imgSrc}
-                  alt={product.imgAlt}
-                />
-                <h2 className="font-secondary text-2xl mx-auto my-4">
-                  {product.name}
-                </h2>
-                <p className="mx-2">{product.desc}</p>
+        <ul className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto w-10/12">
+          {products.map((product) => (
+            <li
+              key={product.id}
+              className="flex flex-col shadow-md py-4 rounded-ss-xl rounded-se-xl"
+            >
+              <img
+                className="rounded-ss-xl rounded-se-xl"
+                src={product.imgSrc}
+                alt={product.imgAlt}
+              />
+              <h2 className="font-secondary text-2xl mx-auto my-4">
+                {product.name}
+              </h2>
+              <p className="mx-2">{product.desc}</p>
 
-                <span className="flex items-center m-4 justify-between">
-                  <button
-                    onClick={() => add(product)}
-                    className="bg-primary px-2 py-1 text-lg rounded-xl font-terciary"
-                  >
-                    Adicionar ao Carrinho
-                  </button>
+              <span className="flex items-center m-4 justify-between">
+                <button
+                  onClick={() => add(product)}
+                  className="bg-primary px-2 py-1 text-lg rounded-xl font-terciary"
+                >
+                  Adicionar ao Carrinho
+                </button>
 
-                  <p className="font-bold">R$ {product.price}</p>
-                </span>
-              </li>
-            ))}
+                <p className="font-bold">R$ {product.price}</p>
+              </span>
+            </li>
+          ))}
         </ul>
       ) : (
         <Loading />

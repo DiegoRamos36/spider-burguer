@@ -11,7 +11,7 @@ const Loading = () => {
           clearInterval(interval);
           return 100; // Garante que atinge 100% ao final
         }
-        return prev + 10; // Ajuste a incrementação conforme necessário
+        return prev + 1; // Ajuste a incrementação conforme necessário
       });
     }, 100); // 2000ms / 20 (para 20 incrementos de 5%)
 

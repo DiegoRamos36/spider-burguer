@@ -42,12 +42,12 @@ const Pedidos = () => {
   return (
     <>
       {pedidos.length > 0 ? (
-        <section className="w-10/12 mx-auto my-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3">
-            {pedidos.reverse().map((pedido) => (
+        <section className="sm:w-10/12 mx-4 sm:mx-auto  mt-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
+            {pedidos.map((pedido) => (
               <li
                 key={pedido.id}
-                className="flex flex-col border-2 shadow-lg p-4  rounded-lg justify-between"
+                className="flex flex-col  border-2 shadow-lg  p-4  rounded-lg justify-between"
               >
                 <div className="flex justify-between mb-4 font-bold text-lg">
                   <p>{inverterData(limparData(pedido.createdAt))}</p>
@@ -73,11 +73,11 @@ const Pedidos = () => {
                     </li>
                   ))}
                 </div>
-                <div className="flex justify-between pt-4">
-                  <button className="bg-primary text-secondary font-terciary px-2 rounded-md text-lg">
+                <div className="flex justify-between py-4">
+                  <button className="bg-primary text-secondary font-terciary px-2 rounded-sm text-lg">
                     Ajuda
                   </button>
-                  <button className="bg-primary text-secondary font-terciary px-2 rounded-md text-lg">
+                  <button className="bg-primary text-secondary font-terciary px-2 rounded-sm text-lg">
                     Reportar problema
                   </button>
                 </div>

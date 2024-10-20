@@ -26,11 +26,17 @@ function App() {
         <NotificationProvider>
           <CartProvider>
             <LoggedProvider>
-              <ToastContainer />
+              <ToastContainer
+                position="bottom-right"
+                autoClose={1000}
+                draggable="touch"
+                draggableDirection="x"
+                theme="dark"
+              />
               <BrowserRouter>
                 <div className="flex flex-col min-h-screen">
                   <Header />
-                  <main className="flex-grow mt-14">
+                  <main className="flex-grow pt-24 mt-2 lg:pt-14 md:mt-0">
                     <Routes>
                       <Route path="/" element={<Initial />} />
                       <Route path="/login" element={<Login />} />
